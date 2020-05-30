@@ -1,0 +1,13 @@
+{
+    "include": [
+        "src",
+        "tests"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__",
+        "**/.git",
+        "**/.pytest_cache"
+    ],
+    "pythonVersion": "3.7.3"
+}
