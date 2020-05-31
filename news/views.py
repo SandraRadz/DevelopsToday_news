@@ -3,8 +3,8 @@ from rest_framework.decorators import api_view
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 
-from news.models import NewPost
-from news.serializers import PostSerializer
+from news.models import NewPost, Comment
+from news.serializers import PostSerializer, CommentSerializer
 
 
 class PostList(generics.ListCreateAPIView):
@@ -25,3 +25,12 @@ def upvote_new(request, pk):
     serializer = PostSerializer(post)
     return Response(serializer.data)
 
+
+class CommentList(generics.ListCreateAPIView):
+    serializer_class = CommentSerializer
+    queryset = Comment.objects.all()
+
+
+class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = CommentSerializer
+    queryset = Comment.objects.all()
