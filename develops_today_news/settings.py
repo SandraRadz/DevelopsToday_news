@@ -122,3 +122,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 COPY_START_YEAR = 2020
+
+
+REDIS_URL = os.environ.get('REDIS_URL', 'http://localhost:6379')

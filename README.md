@@ -14,7 +14,19 @@ python manage.py migrate
 ```bash
 python manage.py createsuperuser
 ```
-4. Run the server
+4. Install and run Redis server
+```bash
+redis-server
+```
+5. Run Celery worker
+```bash
+celery -A develops_today_news worker --pool=solo -l info 
+```
+and Celery beat
+```bash 
+celery -A develops_today_news beat -l info 
+```
+6. Run the server
 ```bash
 python manage.py runserver
 ```
