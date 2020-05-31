@@ -17,7 +17,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PostSerializer
 
 
-@api_view(["PUT"])
+@api_view(["PATCH"])
 def upvote_new(request, pk):
     post = get_object_or_404(NewPost, pk=pk)
     post.upvotes_amount += 1

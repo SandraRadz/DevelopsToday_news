@@ -18,3 +18,5 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+
+Postman https://www.postman.com/collections/bf4855d9ca21a8cf6809

@@ -7,5 +7,5 @@ urlpatterns = [
     path('<int:pk>/', PostDetail.as_view(), name="post-detail"),
     path('<int:pk>/upvote', upvote_new, name="upvote-new"),
     path('comments', CommentList.as_view(), name="comment-list"),
-    path('comments/<int:pk>', CommentDetail.as_view(), name="comment-detail")
+    path('comments/<int:pk>/', CommentDetail.as_view(), name="comment-detail")
 ]
