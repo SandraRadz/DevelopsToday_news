@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'copyright',
+    'rest_framework',
+    'news.apps.NewsConfig'
 ]
 
 MIDDLEWARE = [
